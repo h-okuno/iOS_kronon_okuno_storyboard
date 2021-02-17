@@ -8,10 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        let image = UIImage(named: "start_button_top_view")
+//        button.setBackgroundImage(image, for: .normal)
     }
 
 
