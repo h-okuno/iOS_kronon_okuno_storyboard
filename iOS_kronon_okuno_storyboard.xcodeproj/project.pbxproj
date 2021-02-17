@@ -37,6 +37,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB87C32725DCDC20006BDFD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB87C32825DCDC55006BDFD6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		ABB6C3E925DCA05700C55F27 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +70,8 @@
 		ABB6C3F425DCA05800C55F27 /* iOS_kronon_okuno_storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				AB87C32825DCDC55006BDFD6 /* ViewController */,
+				AB87C32725DCDC20006BDFD6 /* Models */,
 				ABB6C3F525DCA05800C55F27 /* AppDelegate.swift */,
 				ABB6C3F725DCA05800C55F27 /* SceneDelegate.swift */,
 				ABB6C3F925DCA05800C55F27 /* ViewController.swift */,
