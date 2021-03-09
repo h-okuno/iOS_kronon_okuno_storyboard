@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "start_button_top.png",
+      "filename" : "input_create_account.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "start_button_top@2x.png",
+      "filename" : "input_create_account@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "start_button_top@3x.png",
+      "filename" : "input_create_account@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

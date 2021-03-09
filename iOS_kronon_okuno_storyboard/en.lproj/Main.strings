@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "〜くろのん〜"; ObjectID = "BYW-1a-36g"; */
+"BYW-1a-36g.text" = "〜くろのん〜";
+
+/* Class = "UIButton"; accessibilityLabel = "スタート"; ObjectID = "JFl-SL-JPA"; */
+"JFl-SL-JPA.accessibilityLabel" = "スタート";
+
+/* Class = "UIButton"; normalTitle = "スタート"; ObjectID = "JFl-SL-JPA"; */
+"JFl-SL-JPA.normalTitle" = "スタート";
+
+/* Class = "UILabel"; text = "予定管理システム"; ObjectID = "xhY-Fq-wU1"; */
+"xhY-Fq-wU1.text" = "予定管理システム";

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z9y-Xe-76V">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,74 +11,434 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="topStoryboard" id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="〜くろのん〜" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4ym-YV-MLR">
-                                <rect key="frame" x="72" y="183" width="231" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbc-x3-6pa" customClass="TopView" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target">
+                                <rect key="frame" x="0.33333333333334281" y="139" width="427.33333333333326" height="593"/>
+                                <color key="backgroundColor" red="0.88015866279999999" green="0.57217079400000004" blue="0.21164208649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zbc-x3-6pa" secondAttribute="height" multiplier="75:104" id="U33-CH-OoW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihj-Ca-Y0x" customClass="underView">
+                                <rect key="frame" x="0.0" y="780" width="428" height="146"/>
                                 <color key="backgroundColor" red="0.87623941900000002" green="0.56431001420000004" blue="0.2037962079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUr-fp-F4S" userLabel="baseView" customClass="TopView" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="139"/>
+                                <color key="backgroundColor" red="0.87623941900000002" green="0.56431001420000004" blue="0.2037962079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="予定管理システム" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="xhY-Fq-wU1">
+                                <rect key="frame" x="95" y="139" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xhY-Fq-wU1" secondAttribute="height" multiplier="119:15" id="exx-Oh-uMe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
                                 <color key="textColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kronon_top_view" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-Rs-a5i">
-                                <rect key="frame" x="85" y="269" width="267" height="253"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜くろのん〜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="BYW-1a-36g">
+                                <rect key="frame" x="80" y="179" width="268" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BYW-1a-36g" secondAttribute="height" multiplier="268:45" id="q3T-fo-l0F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="45"/>
+                                <color key="textColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_kronon_star" translatesAutoresizingMaskIntoConstraints="NO" id="WK4-Mi-tcs">
+                                <rect key="frame" x="52" y="331.66666666666669" width="324" height="263.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WK4-Mi-tcs" secondAttribute="height" multiplier="324:263" id="yJU-Dq-Omz"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_top_view" translatesAutoresizingMaskIntoConstraints="NO" id="pX0-Ol-xCh">
-                                <rect key="frame" x="38" y="391" width="136" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFl-SL-JPA">
-                                <rect key="frame" x="105" y="591" width="165" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFl-SL-JPA">
+                                <rect key="frame" x="131.66666666666666" y="734" width="164.99999999999997" height="46"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <state key="normal" title="スタート" backgroundImage="start_button_top_view">
                                     <color key="titleColor" red="0.36078431372549019" green="0.3529411764705882" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fj9-YM-lpl"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="予定管理システム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBa-Ou-Qp7">
-                                <rect key="frame" x="97.999999999999986" y="144" width="174.66666666666663" height="22"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.88015866279999999" green="0.57217079400000004" blue="0.21164208649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="YBa-Ou-Qp7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="87K-Dm-Qhk"/>
-                            <constraint firstItem="YBa-Ou-Qp7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="j7J-RH-Zi0"/>
+                            <constraint firstItem="hUr-fp-F4S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="07x-Dm-smT"/>
+                            <constraint firstItem="ihj-Ca-Y0x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Ex-2m-pQf"/>
+                            <constraint firstItem="ihj-Ca-Y0x" firstAttribute="top" secondItem="JFl-SL-JPA" secondAttribute="bottom" id="0bz-Q6-9BM"/>
+                            <constraint firstItem="JFl-SL-JPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1YX-7w-QJf"/>
+                            <constraint firstItem="ihj-Ca-Y0x" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.157635" id="6NO-bU-LfC"/>
+                            <constraint firstItem="zbc-x3-6pa" firstAttribute="top" secondItem="hUr-fp-F4S" secondAttribute="bottom" id="89c-ZJ-uZ7"/>
+                            <constraint firstItem="WK4-Mi-tcs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Ad-xt-5hS"/>
+                            <constraint firstItem="hUr-fp-F4S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Tt-En-btU"/>
+                            <constraint firstItem="BYW-1a-36g" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0485961" id="Ano-h7-Kqy"/>
+                            <constraint firstItem="BYW-1a-36g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8b-mY-16T"/>
+                            <constraint firstItem="zbc-x3-6pa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HTG-Kc-VIa"/>
+                            <constraint firstItem="hUr-fp-F4S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hxp-Na-tfL"/>
+                            <constraint firstAttribute="bottom" secondItem="ihj-Ca-Y0x" secondAttribute="bottom" id="Iip-3a-BLb"/>
+                            <constraint firstItem="WK4-Mi-tcs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NA5-kM-SXi"/>
+                            <constraint firstItem="xhY-Fq-wU1" firstAttribute="top" secondItem="hUr-fp-F4S" secondAttribute="bottom" id="OdR-JL-H1x"/>
+                            <constraint firstItem="xhY-Fq-wU1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0323974" id="RzV-J5-225"/>
+                            <constraint firstItem="WK4-Mi-tcs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.284017" id="SiF-Jc-mmm"/>
+                            <constraint firstItem="ihj-Ca-Y0x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="anj-Bc-yLa"/>
+                            <constraint firstItem="hUr-fp-F4S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bID-M0-dqG"/>
+                            <constraint firstItem="BYW-1a-36g" firstAttribute="top" secondItem="xhY-Fq-wU1" secondAttribute="bottom" constant="10" id="jtN-Nc-sZ5"/>
+                            <constraint firstItem="xhY-Fq-wU1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wCE-im-Aez"/>
+                            <constraint firstItem="zbc-x3-6pa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.640394" id="wCM-PC-9wb"/>
+                            <constraint firstItem="ihj-Ca-Y0x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yAB-b0-2JP"/>
+                            <constraint firstItem="hUr-fp-F4S" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="yKm-xx-YBa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a9a-Tl-Yhe"/>
+                    <connections>
+                        <outlet property="subTitle" destination="xhY-Fq-wU1" id="KQO-8h-M7d"/>
+                        <outlet property="topButton" destination="JFl-SL-JPA" id="Eq0-jS-bl8"/>
+                        <outlet property="topImage" destination="WK4-Mi-tcs" id="mCf-KG-ann"/>
+                        <outlet property="topTitle" destination="BYW-1a-36g" id="Hgb-i0-iD6"/>
+                        <segue destination="OOM-qm-eBV" kind="show" identifier="toLogin" id="Itr-W1-ojF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="103.44827586206897"/>
+            <point key="canvasLocation" x="1038.7850467289718" y="103.02375809935207"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="lEu-dl-uhw">
             <objects>
-                <viewController id="OOM-qm-eBV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vga-yW-pjP" customClass="LoginViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <viewController storyboardIdentifier="LoginView" id="OOM-qm-eBV" customClass="LoginController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="LoginView" id="Vga-yW-pjP" customClass="LoginViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-HZ-r2y">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="139"/>
+                                <color key="backgroundColor" red="0.21176470588235294" green="0.3529411764705882" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="five_star_login" translatesAutoresizingMaskIntoConstraints="NO" id="mLN-Rt-daL">
+                                <rect key="frame" x="101.33333333333333" y="147" width="225.33333333333337" height="231.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mLN-Rt-daL" secondAttribute="height" multiplier="189:194" id="8hX-AF-Gee"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜くろのん〜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-Ro-VTG">
+                                <rect key="frame" x="79" y="388.33333333333331" width="270" height="46.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h0D-Ro-VTG" secondAttribute="height" multiplier="134:23" id="fZa-uz-qbr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="45"/>
+                                <color key="textColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" minimumFontSize="17" background="input_field_login" translatesAutoresizingMaskIntoConstraints="NO" id="RNW-9r-zET">
+                                <rect key="frame" x="28.666666666666657" y="484.66666666666669" width="370.66666666666674" height="46.333333333333314"/>
+                                <accessibility key="accessibilityConfiguration" hint="メールアドレス" label="email"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RNW-9r-zET" secondAttribute="height" multiplier="8:1" id="cJT-4m-4uP"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" minimumFontSize="17" background="input_field_login" translatesAutoresizingMaskIntoConstraints="NO" id="hLM-sm-7xB">
+                                <rect key="frame" x="28.666666666666657" y="551" width="370.66666666666674" height="46.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hLM-sm-7xB" secondAttribute="height" multiplier="8:1" id="Edw-WR-raW"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUs-ha-5Ys">
+                                <rect key="frame" x="28.666666666666657" y="617.33333333333337" width="370.66666666666674" height="46.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DUs-ha-5Ys" secondAttribute="height" multiplier="8:1" id="6r6-FR-zlu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="ログイン" backgroundImage="button_login">
+                                    <color key="titleColor" red="0.36078431370000003" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vAm-BJ-eel" kind="show" id="34N-tv-HQk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウントをお持ちでない場合はこちら" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pjb-3C-B5u">
+                                <rect key="frame" x="115" y="683.66666666666663" width="198" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pjb-3C-B5u" secondAttribute="height" multiplier="18:1" id="qBI-bh-5Vz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="11"/>
+                                <color key="textColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6M-Yw-PnW">
+                                <rect key="frame" x="318" y="676" width="56" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c6M-Yw-PnW" secondAttribute="height" multiplier="28:13" id="4HN-lC-tCH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                <state key="normal" title="新規登録">
+                                    <color key="titleColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CHL-WZ-kUI" kind="show" id="hKx-g9-64P"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7WP-hP-QlF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.3529411764705882" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mLN-Rt-daL" firstAttribute="top" secondItem="NVc-HZ-r2y" secondAttribute="bottom" constant="8" id="1qL-IY-a8y"/>
+                            <constraint firstItem="c6M-Yw-PnW" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.0280778" id="2SO-ba-zHa"/>
+                            <constraint firstItem="mLN-Rt-daL" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="68u-9l-hoW"/>
+                            <constraint firstItem="h0D-Ro-VTG" firstAttribute="top" secondItem="mLN-Rt-daL" secondAttribute="bottom" constant="10" id="A2g-IL-pH4"/>
+                            <constraint firstItem="NVc-HZ-r2y" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.15" id="CEz-eb-s2x"/>
+                            <constraint firstItem="c6M-Yw-PnW" firstAttribute="centerY" secondItem="Pjb-3C-B5u" secondAttribute="centerY" id="CJR-nO-Iiu"/>
+                            <constraint firstItem="RNW-9r-zET" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.05" id="CJi-dR-6ts"/>
+                            <constraint firstItem="Pjb-3C-B5u" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.011879" id="Fjo-9J-RPc"/>
+                            <constraint firstItem="RNW-9r-zET" firstAttribute="top" secondItem="h0D-Ro-VTG" secondAttribute="bottom" constant="50" id="NSm-Iw-wxt"/>
+                            <constraint firstItem="DUs-ha-5Ys" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.05" id="Yng-ph-eih"/>
+                            <constraint firstItem="Pjb-3C-B5u" firstAttribute="top" secondItem="DUs-ha-5Ys" secondAttribute="bottom" constant="20" id="bHD-1n-QKt"/>
+                            <constraint firstItem="h0D-Ro-VTG" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.05" id="buP-R0-aSF"/>
+                            <constraint firstItem="Pjb-3C-B5u" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="ciQ-bW-hde"/>
+                            <constraint firstItem="mLN-Rt-daL" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.25" id="hCx-Aq-mxA"/>
+                            <constraint firstItem="hLM-sm-7xB" firstAttribute="height" secondItem="Vga-yW-pjP" secondAttribute="height" multiplier="0.05" id="hd6-P1-gNH"/>
+                            <constraint firstItem="hLM-sm-7xB" firstAttribute="top" secondItem="RNW-9r-zET" secondAttribute="bottom" constant="20" id="hed-yV-kK8"/>
+                            <constraint firstItem="DUs-ha-5Ys" firstAttribute="top" secondItem="hLM-sm-7xB" secondAttribute="bottom" constant="20" id="iRl-dc-a6m"/>
+                            <constraint firstItem="RNW-9r-zET" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="iTT-oc-CgW"/>
+                            <constraint firstItem="h0D-Ro-VTG" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="jjz-1I-W3m"/>
+                            <constraint firstItem="DUs-ha-5Ys" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="mVc-Dv-Rf9"/>
+                            <constraint firstItem="hLM-sm-7xB" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="n4C-i7-WpA"/>
+                            <constraint firstItem="NVc-HZ-r2y" firstAttribute="top" secondItem="Vga-yW-pjP" secondAttribute="top" id="o0w-XW-iLq"/>
+                            <constraint firstItem="NVc-HZ-r2y" firstAttribute="leading" secondItem="7WP-hP-QlF" secondAttribute="leading" id="ut6-3M-IsM"/>
+                            <constraint firstItem="NVc-HZ-r2y" firstAttribute="centerX" secondItem="Vga-yW-pjP" secondAttribute="centerX" id="wCF-3W-VIf"/>
+                            <constraint firstItem="c6M-Yw-PnW" firstAttribute="leading" secondItem="Pjb-3C-B5u" secondAttribute="trailing" constant="5" id="yd6-eA-wtT"/>
+                            <constraint firstItem="NVc-HZ-r2y" firstAttribute="trailing" secondItem="7WP-hP-QlF" secondAttribute="trailing" id="zR3-1y-XFS"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SbU-Gd-Ih5">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="wQ8-dD-8MS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputEmail" destination="RNW-9r-zET" id="Y95-Ra-uvN"/>
+                        <outlet property="inputPassword" destination="hLM-sm-7xB" id="pKa-dj-WRd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvK-Lx-WSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="103"/>
+            <point key="canvasLocation" x="1907.9439252336447" y="102.3758099352052"/>
+        </scene>
+        <!--アカウント作成-->
+        <scene sceneID="DCM-Vp-EBq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPc-s6-JM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="AccountView" id="CHL-WZ-kUI" customClass="AccountViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tmj-Uo-zl1">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-jG-1Nn">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="139"/>
+                                <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q2H-x5-hye">
+                                <rect key="frame" x="66.333333333333343" y="139" width="295.33333333333326" height="81.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q2H-x5-hye" secondAttribute="height" multiplier="98:27" id="wHd-HZ-kGz"/>
+                                </constraints>
+                                <string key="text">表示名は日本語で15文字以内パスワードは半角英数字で8~20文字大文字・小文字・数字を必ず使用して設定してね。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.36078431370000003" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" minimumFontSize="17" background="input_create_account" translatesAutoresizingMaskIntoConstraints="NO" id="AwE-u6-Tnd">
+                                <rect key="frame" x="30" y="343.66666666666669" width="368" height="46.333333333333314"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" background="input_create_account" translatesAutoresizingMaskIntoConstraints="NO" id="cqV-Js-Qt2">
+                                <rect key="frame" x="30" y="410" width="368" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" background="input_create_account" translatesAutoresizingMaskIntoConstraints="NO" id="NXu-R0-VVd">
+                                <rect key="frame" x="30" y="476" width="368" height="46.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" background="input_create_account" translatesAutoresizingMaskIntoConstraints="NO" id="JHs-ZA-vkL">
+                                <rect key="frame" x="30" y="542.33333333333337" width="368" height="46.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25p-2C-exa">
+                                <rect key="frame" x="30" y="608.66666666666663" width="368" height="46.333333333333371"/>
+                                <state key="normal" title="新規登録" backgroundImage="button_orange">
+                                    <color key="titleColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vAm-BJ-eel" kind="show" id="FbP-P1-fuH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ny8-PK-cfe"/>
+                        <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="25p-2C-exa" firstAttribute="leading" secondItem="ny8-PK-cfe" secondAttribute="leading" constant="30" id="0BO-go-C1h"/>
+                            <constraint firstItem="AwE-u6-Tnd" firstAttribute="leading" secondItem="ny8-PK-cfe" secondAttribute="leading" constant="30" id="0db-LD-voM"/>
+                            <constraint firstItem="JHs-ZA-vkL" firstAttribute="centerX" secondItem="Tmj-Uo-zl1" secondAttribute="centerX" id="2WG-lU-lZG"/>
+                            <constraint firstItem="NXu-R0-VVd" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.05" id="2dv-Ne-nH8"/>
+                            <constraint firstItem="JHs-ZA-vkL" firstAttribute="trailing" secondItem="ny8-PK-cfe" secondAttribute="trailing" constant="-30" id="2sh-G9-B7E"/>
+                            <constraint firstItem="NXu-R0-VVd" firstAttribute="centerX" secondItem="Tmj-Uo-zl1" secondAttribute="centerX" id="3Ch-3Q-j6y"/>
+                            <constraint firstItem="q0c-jG-1Nn" firstAttribute="leading" secondItem="Tmj-Uo-zl1" secondAttribute="leading" id="4J0-hP-L5F"/>
+                            <constraint firstItem="q2H-x5-hye" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.087833" id="5fL-Mh-9mr"/>
+                            <constraint firstItem="25p-2C-exa" firstAttribute="top" secondItem="JHs-ZA-vkL" secondAttribute="bottom" constant="20" id="6sp-pp-Kqr"/>
+                            <constraint firstItem="q2H-x5-hye" firstAttribute="top" secondItem="q0c-jG-1Nn" secondAttribute="bottom" id="BsS-ye-sBw"/>
+                            <constraint firstItem="AwE-u6-Tnd" firstAttribute="centerX" secondItem="Tmj-Uo-zl1" secondAttribute="centerX" id="EGT-LU-kib"/>
+                            <constraint firstItem="q2H-x5-hye" firstAttribute="centerX" secondItem="Tmj-Uo-zl1" secondAttribute="centerX" id="GNL-E6-eh9"/>
+                            <constraint firstItem="AwE-u6-Tnd" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.05" id="Hij-P3-eRC"/>
+                            <constraint firstItem="25p-2C-exa" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.05" id="LF2-nj-S0o"/>
+                            <constraint firstItem="NXu-R0-VVd" firstAttribute="leading" secondItem="ny8-PK-cfe" secondAttribute="leading" constant="30" id="O4O-46-tv8"/>
+                            <constraint firstItem="JHs-ZA-vkL" firstAttribute="top" secondItem="NXu-R0-VVd" secondAttribute="bottom" constant="20" id="SLf-VG-T8Z"/>
+                            <constraint firstItem="q0c-jG-1Nn" firstAttribute="top" secondItem="Tmj-Uo-zl1" secondAttribute="top" id="VVg-IW-bKJ"/>
+                            <constraint firstAttribute="trailing" secondItem="q0c-jG-1Nn" secondAttribute="trailing" id="ViC-8u-nX9"/>
+                            <constraint firstItem="cqV-Js-Qt2" firstAttribute="trailing" secondItem="ny8-PK-cfe" secondAttribute="trailing" constant="-30" id="XqF-u4-2Sg"/>
+                            <constraint firstItem="cqV-Js-Qt2" firstAttribute="leading" secondItem="ny8-PK-cfe" secondAttribute="leading" constant="30" id="aDQ-85-Ljt"/>
+                            <constraint firstItem="cqV-Js-Qt2" firstAttribute="centerX" secondItem="Tmj-Uo-zl1" secondAttribute="centerX" id="afA-tD-ZZq"/>
+                            <constraint firstItem="cqV-Js-Qt2" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.05" id="b2u-iO-AzK"/>
+                            <constraint firstItem="25p-2C-exa" firstAttribute="centerX" secondItem="Tmj-Uo-zl1" secondAttribute="centerX" id="bEQ-bz-YNZ"/>
+                            <constraint firstItem="q0c-jG-1Nn" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.15" id="d1a-Jp-8hG"/>
+                            <constraint firstItem="cqV-Js-Qt2" firstAttribute="centerY" secondItem="Tmj-Uo-zl1" secondAttribute="centerY" constant="-30" id="dAq-cW-g9L"/>
+                            <constraint firstItem="cqV-Js-Qt2" firstAttribute="top" secondItem="AwE-u6-Tnd" secondAttribute="bottom" constant="20" id="dc1-c6-8re"/>
+                            <constraint firstItem="25p-2C-exa" firstAttribute="trailing" secondItem="ny8-PK-cfe" secondAttribute="trailing" constant="-30" id="diH-4p-j97"/>
+                            <constraint firstItem="JHs-ZA-vkL" firstAttribute="height" secondItem="Tmj-Uo-zl1" secondAttribute="height" multiplier="0.05" id="lLX-1q-Vwd"/>
+                            <constraint firstItem="AwE-u6-Tnd" firstAttribute="trailing" secondItem="ny8-PK-cfe" secondAttribute="trailing" constant="-30" id="qZ5-et-vaG"/>
+                            <constraint firstItem="NXu-R0-VVd" firstAttribute="trailing" secondItem="ny8-PK-cfe" secondAttribute="trailing" constant="-30" id="r6b-xf-Goi"/>
+                            <constraint firstItem="JHs-ZA-vkL" firstAttribute="leading" secondItem="ny8-PK-cfe" secondAttribute="leading" constant="30" id="taq-S6-X5m"/>
+                            <constraint firstItem="NXu-R0-VVd" firstAttribute="top" secondItem="cqV-Js-Qt2" secondAttribute="bottom" constant="20" id="v7R-Hr-JkN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="アカウント作成" id="abS-i1-5lw">
+                        <barButtonItem key="backBarButtonItem" title="戻る" springLoaded="YES" id="ue5-MP-y8J"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputConfPassword" destination="JHs-ZA-vkL" id="lti-DD-L3y"/>
+                        <outlet property="inputEmail" destination="cqV-Js-Qt2" id="UpG-jU-mqh"/>
+                        <outlet property="inputName" destination="AwE-u6-Tnd" id="ryd-If-ul1"/>
+                        <outlet property="inputPassword" destination="NXu-R0-VVd" id="55O-NN-40n"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1907.9439252336447" y="889.63282937365022"/>
+        </scene>
+        <!--予定表-->
+        <scene sceneID="wxn-8C-A3I">
+            <objects>
+                <viewController id="jin-1d-2iq" customClass="ShowScheduleViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uaX-m4-d51">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I7R-wI-U8y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="予定表" image="clock" catalog="system" id="6sd-cy-tZX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Edj-WQ-o8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4381" y="481"/>
+        </scene>
+        <!--カレンダー-->
+        <scene sceneID="lM4-f8-MbL">
+            <objects>
+                <viewController id="Dyc-Vl-ggZ" customClass="CalendarViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ryW-eF-5J7">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c0t-1I-hOi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="カレンダー" image="calendar" catalog="system" id="JHU-nY-iZa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9p-vO-IUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4381" y="-288"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zEO-bB-eTp">
+            <objects>
+                <tabBarController id="vAm-BJ-eel" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tPB-rN-tSB"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hWw-od-PWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.87623941900000002" green="0.56431001420000004" blue="0.2037962079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dyc-Vl-ggZ" kind="relationship" relationship="viewControllers" id="47S-FM-92v"/>
+                        <segue destination="jin-1d-2iq" kind="relationship" relationship="viewControllers" id="hMD-pY-79T"/>
+                        <segue destination="3vN-gS-NG7" kind="relationship" relationship="viewControllers" id="0rf-2B-uxm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0g-oo-wzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3502" y="481"/>
+        </scene>
+        <!--アカウント-->
+        <scene sceneID="v3h-aW-8Xa">
+            <objects>
+                <viewController id="3vN-gS-NG7" customClass="AccountViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH7-Rs-7X4">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wuO-65-GBd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="アカウント" image="person.crop.circle" catalog="system" id="Brj-fz-6W1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoL-oC-ubd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4381" y="1237"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lBL-Kj-XTn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Z9y-Xe-76V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAc-8s-jBX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hcw-lo-KZQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tNe-VG-yrH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhB-mU-UlV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.78504672897196" y="103.02375809935207"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="34N-tv-HQk"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="kronon_top_view" width="275" height="242"/>
-        <image name="star_top_view" width="142" height="142"/>
+        <image name="button_login" width="327" height="48"/>
+        <image name="button_orange" width="327" height="48"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="five_star_login" width="189" height="194"/>
+        <image name="input_create_account" width="327" height="48"/>
+        <image name="input_field_login" width="327" height="48"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="start_button_top_view" width="165" height="46"/>
+        <image name="top_kronon_star" width="324" height="262.66665649414062"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

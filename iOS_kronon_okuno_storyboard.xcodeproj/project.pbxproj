@@ -7,22 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB430DF525F0C051000FDE3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F925DCA05800C55F27 /* ViewController.swift */; };
+		AB430DF825F20C30000FDE3C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430DF725F20C30000FDE3C /* LoginController.swift */; };
+		AB430E0525F72E13000FDE3C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E0425F72E13000FDE3C /* AccountViewController.swift */; };
+		AB430E0925F73DBE000FDE3C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E0825F73DBE000FDE3C /* CalendarViewController.swift */; };
+		AB430E1925F74F23000FDE3C /* ShowScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E1825F74F23000FDE3C /* ShowScheduleViewController.swift */; };
+		AB430E1E25F75001000FDE3C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E1D25F75001000FDE3C /* AccountViewController.swift */; };
 		ABB6C3F625DCA05800C55F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F525DCA05800C55F27 /* AppDelegate.swift */; };
 		ABB6C3F825DCA05800C55F27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F725DCA05800C55F27 /* SceneDelegate.swift */; };
-		ABB6C3FA25DCA05800C55F27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F925DCA05800C55F27 /* ViewController.swift */; };
 		ABB6C3FD25DCA05800C55F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6C3FB25DCA05800C55F27 /* Main.storyboard */; };
 		ABB6C3FF25DCA05D00C55F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB6C3FE25DCA05D00C55F27 /* Assets.xcassets */; };
-		ABB6C40225DCA05D00C55F27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6C40025DCA05D00C55F27 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB430DF725F20C30000FDE3C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AB430E0425F72E13000FDE3C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AB430E0825F73DBE000FDE3C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AB430E1825F74F23000FDE3C /* ShowScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowScheduleViewController.swift; sourceTree = "<group>"; };
+		AB430E1D25F75001000FDE3C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		ABB6C3F225DCA05800C55F27 /* iOS_kronon_okuno_storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_kronon_okuno_storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB6C3F525DCA05800C55F27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6C3F725DCA05800C55F27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ABB6C3F925DCA05800C55F27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABB6C3FC25DCA05800C55F27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABB6C3FE25DCA05D00C55F27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ABB6C40125DCA05D00C55F27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB6C40325DCA05D00C55F27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +45,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB430E0025F70D80000FDE3C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AB430DF725F20C30000FDE3C /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB430E0125F70D91000FDE3C /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				AB430E0425F72E13000FDE3C /* AccountViewController.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		AB430E0725F73D97000FDE3C /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AB430E0825F73DBE000FDE3C /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		AB430E1725F74EE4000FDE3C /* ShowSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				AB430E1825F74F23000FDE3C /* ShowScheduleViewController.swift */,
+			);
+			path = ShowSchedule;
+			sourceTree = "<group>";
+		};
+		AB430E1C25F74FF0000FDE3C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				AB430E1D25F75001000FDE3C /* AccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		AB87C32725DCDC20006BDFD6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -44,11 +92,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AB87C32825DCDC55006BDFD6 /* ViewController */ = {
+		AB87C32825DCDC55006BDFD6 /* TopViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ABB6C3F925DCA05800C55F27 /* ViewController.swift */,
 			);
-			path = ViewController;
+			path = TopViewController;
 			sourceTree = "<group>";
 		};
 		ABB6C3E925DCA05700C55F27 = {
@@ -70,14 +119,17 @@
 		ABB6C3F425DCA05800C55F27 /* iOS_kronon_okuno_storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				AB87C32825DCDC55006BDFD6 /* ViewController */,
+				AB430E1C25F74FF0000FDE3C /* Account */,
+				AB430E1725F74EE4000FDE3C /* ShowSchedule */,
+				AB430E0725F73D97000FDE3C /* Calendar */,
+				AB430E0125F70D91000FDE3C /* CreateAccount */,
+				AB430E0025F70D80000FDE3C /* Login */,
+				AB87C32825DCDC55006BDFD6 /* TopViewController */,
 				AB87C32725DCDC20006BDFD6 /* Models */,
 				ABB6C3F525DCA05800C55F27 /* AppDelegate.swift */,
 				ABB6C3F725DCA05800C55F27 /* SceneDelegate.swift */,
-				ABB6C3F925DCA05800C55F27 /* ViewController.swift */,
 				ABB6C3FB25DCA05800C55F27 /* Main.storyboard */,
 				ABB6C3FE25DCA05D00C55F27 /* Assets.xcassets */,
-				ABB6C40025DCA05D00C55F27 /* LaunchScreen.storyboard */,
 				ABB6C40325DCA05D00C55F27 /* Info.plist */,
 			);
 			path = iOS_kronon_okuno_storyboard;
@@ -140,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB6C40225DCA05D00C55F27 /* LaunchScreen.storyboard in Resources */,
 				ABB6C3FF25DCA05D00C55F27 /* Assets.xcassets in Resources */,
 				ABB6C3FD25DCA05800C55F27 /* Main.storyboard in Resources */,
 			);
@@ -153,8 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB6C3FA25DCA05800C55F27 /* ViewController.swift in Sources */,
+				AB430E1925F74F23000FDE3C /* ShowScheduleViewController.swift in Sources */,
+				AB430E0925F73DBE000FDE3C /* CalendarViewController.swift in Sources */,
+				AB430E1E25F75001000FDE3C /* AccountViewController.swift in Sources */,
+				AB430DF825F20C30000FDE3C /* LoginController.swift in Sources */,
+				AB430E0525F72E13000FDE3C /* AccountViewController.swift in Sources */,
 				ABB6C3F625DCA05800C55F27 /* AppDelegate.swift in Sources */,
+				AB430DF525F0C051000FDE3C /* ViewController.swift in Sources */,
 				ABB6C3F825DCA05800C55F27 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,14 +224,6 @@
 				ABB6C3FC25DCA05800C55F27 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ABB6C40025DCA05D00C55F27 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ABB6C40125DCA05D00C55F27 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
