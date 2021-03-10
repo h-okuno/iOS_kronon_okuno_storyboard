@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		AB430DF525F0C051000FDE3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F925DCA05800C55F27 /* ViewController.swift */; };
 		AB430DF825F20C30000FDE3C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430DF725F20C30000FDE3C /* LoginController.swift */; };
-		AB430E0525F72E13000FDE3C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E0425F72E13000FDE3C /* AccountViewController.swift */; };
+		AB430E0525F72E13000FDE3C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E0425F72E13000FDE3C /* CreateAccountViewController.swift */; };
 		AB430E0925F73DBE000FDE3C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E0825F73DBE000FDE3C /* CalendarViewController.swift */; };
 		AB430E1925F74F23000FDE3C /* ShowScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E1825F74F23000FDE3C /* ShowScheduleViewController.swift */; };
-		AB430E1E25F75001000FDE3C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB430E1D25F75001000FDE3C /* AccountViewController.swift */; };
+		AB57DD3D25F771E200A84412 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57DD3C25F771E200A84412 /* AccountViewController.swift */; };
+		AB57DD4125F7761400A84412 /* CreateScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57DD4025F7761400A84412 /* CreateScheduleViewController.swift */; };
 		ABB6C3F625DCA05800C55F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F525DCA05800C55F27 /* AppDelegate.swift */; };
 		ABB6C3F825DCA05800C55F27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6C3F725DCA05800C55F27 /* SceneDelegate.swift */; };
 		ABB6C3FD25DCA05800C55F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6C3FB25DCA05800C55F27 /* Main.storyboard */; };
@@ -21,10 +22,11 @@
 
 /* Begin PBXFileReference section */
 		AB430DF725F20C30000FDE3C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		AB430E0425F72E13000FDE3C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AB430E0425F72E13000FDE3C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		AB430E0825F73DBE000FDE3C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AB430E1825F74F23000FDE3C /* ShowScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowScheduleViewController.swift; sourceTree = "<group>"; };
-		AB430E1D25F75001000FDE3C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AB57DD3C25F771E200A84412 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AB57DD4025F7761400A84412 /* CreateScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScheduleViewController.swift; sourceTree = "<group>"; };
 		ABB6C3F225DCA05800C55F27 /* iOS_kronon_okuno_storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_kronon_okuno_storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB6C3F525DCA05800C55F27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6C3F725DCA05800C55F27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		AB430E0125F70D91000FDE3C /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
-				AB430E0425F72E13000FDE3C /* AccountViewController.swift */,
+				AB430E0425F72E13000FDE3C /* CreateAccountViewController.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -80,9 +82,17 @@
 		AB430E1C25F74FF0000FDE3C /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				AB430E1D25F75001000FDE3C /* AccountViewController.swift */,
+				AB57DD3C25F771E200A84412 /* AccountViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		AB57DD3F25F775F000A84412 /* CreateSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				AB57DD4025F7761400A84412 /* CreateScheduleViewController.swift */,
+			);
+			path = CreateSchedule;
 			sourceTree = "<group>";
 		};
 		AB87C32725DCDC20006BDFD6 /* Models */ = {
@@ -119,6 +129,7 @@
 		ABB6C3F425DCA05800C55F27 /* iOS_kronon_okuno_storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				AB57DD3F25F775F000A84412 /* CreateSchedule */,
 				AB430E1C25F74FF0000FDE3C /* Account */,
 				AB430E1725F74EE4000FDE3C /* ShowSchedule */,
 				AB430E0725F73D97000FDE3C /* Calendar */,
@@ -206,10 +217,11 @@
 			files = (
 				AB430E1925F74F23000FDE3C /* ShowScheduleViewController.swift in Sources */,
 				AB430E0925F73DBE000FDE3C /* CalendarViewController.swift in Sources */,
-				AB430E1E25F75001000FDE3C /* AccountViewController.swift in Sources */,
+				AB57DD3D25F771E200A84412 /* AccountViewController.swift in Sources */,
 				AB430DF825F20C30000FDE3C /* LoginController.swift in Sources */,
-				AB430E0525F72E13000FDE3C /* AccountViewController.swift in Sources */,
+				AB430E0525F72E13000FDE3C /* CreateAccountViewController.swift in Sources */,
 				ABB6C3F625DCA05800C55F27 /* AppDelegate.swift in Sources */,
+				AB57DD4125F7761400A84412 /* CreateScheduleViewController.swift in Sources */,
 				AB430DF525F0C051000FDE3C /* ViewController.swift in Sources */,
 				ABB6C3F825DCA05800C55F27 /* SceneDelegate.swift in Sources */,
 			);

@@ -23,11 +23,14 @@ class LoginController: UIViewController {
         leftPadding_2.backgroundColor = UIColor.clear
         inputPassword.leftView = leftPadding_2
         inputPassword.leftViewMode = .always
+        
+        createAccountButton.setTitleColor(UIColor.white, for: .normal)
 
     }
     
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)

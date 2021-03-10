@@ -1,5 +1,5 @@
 //
-//  AccountViewController.swift
+//  CreateScheduleViewController.swift
 //  iOS_kronon_okuno_storyboard
 //
 //  Created by 奥野博貴 on 2021/03/09.
@@ -7,23 +7,21 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class CreateScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        UITabBar.appearance().tintColor = UIColor(red: 222/255, green: 155/255, blue: 80/255, alpha: 1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
         
-            tabBarController?.title = "アカウント"
+            tabBarController?.title = "予定登録"
             tabBarController?.navigationItem.hidesBackButton = true
-            tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
         
-        }
+    }
 
     /*
     // MARK: - Navigation

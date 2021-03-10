@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -174,14 +175,21 @@
                                 <color key="textColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6M-Yw-PnW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c6M-Yw-PnW">
                                 <rect key="frame" x="318" y="676" width="56" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="c6M-Yw-PnW" secondAttribute="height" multiplier="28:13" id="4HN-lC-tCH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
-                                <state key="normal" title="新規登録">
-                                    <color key="titleColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="新規登録">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="HiraMaruProN-W4"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="CHL-WZ-kUI" kind="show" id="hKx-g9-64P"/>
@@ -223,6 +231,7 @@
                         <barButtonItem key="backBarButtonItem" title="戻る" id="wQ8-dD-8MS"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="createAccountButton" destination="c6M-Yw-PnW" id="spr-ax-cBJ"/>
                         <outlet property="inputEmail" destination="RNW-9r-zET" id="Y95-Ra-uvN"/>
                         <outlet property="inputPassword" destination="hLM-sm-7xB" id="pKa-dj-WRd"/>
                     </connections>
@@ -234,8 +243,7 @@
         <!--アカウント作成-->
         <scene sceneID="DCM-Vp-EBq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FPc-s6-JM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="AccountView" id="CHL-WZ-kUI" customClass="AccountViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountView" id="CHL-WZ-kUI" customClass="CreateAccountViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tmj-Uo-zl1">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +257,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="q2H-x5-hye" secondAttribute="height" multiplier="98:27" id="wHd-HZ-kGz"/>
                                 </constraints>
-                                <string key="text">表示名は日本語で15文字以内パスワードは半角英数字で8~20文字大文字・小文字・数字を必ず使用して設定してね。</string>
+                                <string key="text">表示名は日本語で15文字以内
+パスワードは半角英数字で8~20文字
+大文字・小文字・数字を必ず使用して
+設定してね。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.36078431370000003" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -331,6 +342,7 @@
                         <outlet property="inputPassword" destination="NXu-R0-VVd" id="55O-NN-40n"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPc-s6-JM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1907.9439252336447" y="889.63282937365022"/>
         </scene>
@@ -342,9 +354,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="I7R-wI-U8y"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="予定表" image="clock" catalog="system" id="6sd-cy-tZX"/>
+                    <connections>
+                        <segue destination="ZSf-UG-juX" kind="show" identifier="toCreateSchedule" id="jyP-ey-fc3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edj-WQ-o8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,14 +372,107 @@
                     <view key="view" contentMode="scaleToFill" id="ryW-eF-5J7">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9y-yB-3bP" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="139"/>
+                                <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CZw-al-frr">
+                                <rect key="frame" x="30" y="194.99999999999997" width="368" height="370.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OLx-2J-v8X">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="loO-ER-t4k" customClass="CalendarCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9dc-R3-kCM">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXq-BV-qpq" userLabel="CalendarDateView">
+                                <rect key="frame" x="30" y="139" width="368" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8I-nD-vcZ">
+                                        <rect key="frame" x="20" y="16" width="13" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" image="chevron.backward" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIk-Z7-4AC">
+                                        <rect key="frame" x="163" y="17.333333333333343" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWu-Bd-KfU">
+                                        <rect key="frame" x="335" y="17" width="13" height="22"/>
+                                        <state key="normal" image="chevron.right" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BWu-Bd-KfU" secondAttribute="trailing" constant="20" id="JDx-qd-v11"/>
+                                    <constraint firstItem="BWu-Bd-KfU" firstAttribute="centerY" secondItem="dXq-BV-qpq" secondAttribute="centerY" id="N6g-he-Gkz"/>
+                                    <constraint firstItem="yIk-Z7-4AC" firstAttribute="centerX" secondItem="dXq-BV-qpq" secondAttribute="centerX" id="QWL-nD-4dq"/>
+                                    <constraint firstItem="yIk-Z7-4AC" firstAttribute="centerY" secondItem="dXq-BV-qpq" secondAttribute="centerY" id="QbC-Gh-u8K"/>
+                                    <constraint firstItem="e8I-nD-vcZ" firstAttribute="height" secondItem="dXq-BV-qpq" secondAttribute="height" multiplier="0.428571" id="Uzb-HC-ZUC"/>
+                                    <constraint firstItem="yIk-Z7-4AC" firstAttribute="height" secondItem="dXq-BV-qpq" secondAttribute="height" multiplier="0.375" id="XI5-pI-dIs"/>
+                                    <constraint firstItem="BWu-Bd-KfU" firstAttribute="height" secondItem="dXq-BV-qpq" secondAttribute="height" multiplier="0.392857" id="aGB-9s-Wu3"/>
+                                    <constraint firstItem="e8I-nD-vcZ" firstAttribute="leading" secondItem="dXq-BV-qpq" secondAttribute="leading" constant="20" id="uTG-bc-Wzk"/>
+                                    <constraint firstItem="e8I-nD-vcZ" firstAttribute="centerY" secondItem="dXq-BV-qpq" secondAttribute="centerY" id="vcu-iG-8x0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="c0t-1I-hOi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CZw-al-frr" firstAttribute="top" secondItem="dXq-BV-qpq" secondAttribute="bottom" id="83Y-bx-Vj5"/>
+                            <constraint firstItem="dXq-BV-qpq" firstAttribute="trailing" secondItem="c0t-1I-hOi" secondAttribute="trailing" constant="-30" id="Dlg-9X-Klj"/>
+                            <constraint firstItem="CZw-al-frr" firstAttribute="trailing" secondItem="c0t-1I-hOi" secondAttribute="trailing" constant="-30" id="GgG-Ss-jxV"/>
+                            <constraint firstItem="n9y-yB-3bP" firstAttribute="top" secondItem="ryW-eF-5J7" secondAttribute="top" id="SY4-8n-jbO"/>
+                            <constraint firstItem="CZw-al-frr" firstAttribute="centerX" secondItem="ryW-eF-5J7" secondAttribute="centerX" id="TqG-Z6-cC5"/>
+                            <constraint firstItem="dXq-BV-qpq" firstAttribute="top" secondItem="n9y-yB-3bP" secondAttribute="bottom" id="bfq-5T-SrW"/>
+                            <constraint firstItem="n9y-yB-3bP" firstAttribute="leading" secondItem="c0t-1I-hOi" secondAttribute="leading" id="eYm-cP-tp9"/>
+                            <constraint firstItem="n9y-yB-3bP" firstAttribute="height" secondItem="ryW-eF-5J7" secondAttribute="height" multiplier="0.15" id="fvW-Yf-4oO"/>
+                            <constraint firstItem="CZw-al-frr" firstAttribute="leading" secondItem="c0t-1I-hOi" secondAttribute="leading" constant="30" id="mms-gs-p7s"/>
+                            <constraint firstItem="n9y-yB-3bP" firstAttribute="centerX" secondItem="ryW-eF-5J7" secondAttribute="centerX" id="tv0-4X-C3W"/>
+                            <constraint firstItem="n9y-yB-3bP" firstAttribute="trailing" secondItem="c0t-1I-hOi" secondAttribute="trailing" id="v0h-hJ-bTv"/>
+                            <constraint firstItem="CZw-al-frr" firstAttribute="height" secondItem="ryW-eF-5J7" secondAttribute="height" multiplier="0.4" id="vKj-rc-39W"/>
+                            <constraint firstItem="dXq-BV-qpq" firstAttribute="height" secondItem="ryW-eF-5J7" secondAttribute="height" multiplier="0.0604752" id="vRF-Kr-VK5"/>
+                            <constraint firstItem="dXq-BV-qpq" firstAttribute="leading" secondItem="c0t-1I-hOi" secondAttribute="leading" constant="30" id="wCD-K7-mTp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="カレンダー" image="calendar" catalog="system" id="JHU-nY-iZa"/>
+                    <connections>
+                        <segue destination="ZSf-UG-juX" kind="show" identifier="toCreateSchedule" id="PQD-9U-R8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9p-vO-IUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4381" y="-288"/>
+            <point key="canvasLocation" x="4380.8411214953267" y="-288.33693304535637"/>
+        </scene>
+        <!--予定登録-->
+        <scene sceneID="liZ-d4-vs4">
+            <objects>
+                <viewController id="ZSf-UG-juX" customClass="CreateScheduleViewController" customModule="iOS_kronon_okuno_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWm-Z4-ghc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w1V-7g-Imz"/>
+                        <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="予定登録" id="t20-bJ-TSa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEE-46-LaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5497" y="-288"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zEO-bB-eTp">
@@ -395,7 +503,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="wuO-65-GBd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99187260870000005" green="0.96902626749999998" blue="0.94117289780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="アカウント" image="person.crop.circle" catalog="system" id="Brj-fz-6W1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -427,11 +535,14 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="34N-tv-HQk"/>
+        <segue reference="PQD-9U-R8X"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="button_login" width="327" height="48"/>
         <image name="button_orange" width="327" height="48"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="five_star_login" width="189" height="194"/>
         <image name="input_create_account" width="327" height="48"/>

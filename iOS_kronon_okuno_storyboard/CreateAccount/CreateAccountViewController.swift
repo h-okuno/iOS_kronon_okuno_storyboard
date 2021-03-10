@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController {
     
     let leftPaddingName = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
     let leftPaddingEmail = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))

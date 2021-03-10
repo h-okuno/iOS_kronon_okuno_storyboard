@@ -29,7 +29,7 @@ class CalendarViewController: UIViewController {
             tabBarController?.title = "カレンダー"
             tabBarController?.navigationItem.hidesBackButton = true
             tabBarController?.navigationItem.rightBarButtonItems = [createScheduleButton]
-        tabBarController?.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.6)
+            tabBarController?.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.6)
         }
 
     /*
