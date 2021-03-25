@@ -17,12 +17,16 @@ class ShowScheduleViewController: UIViewController {
         // Do any additional setup after loading the view.
         UITabBar.appearance().tintColor = UIColor(red: 222/255, green: 155/255, blue: 80/255, alpha: 1)
         createScheduleButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(createScheduleButtonTapped(_:)))
+        
     }
     
     @IBAction func createScheduleButtonTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "toCreateSchedule", sender: self)
     }
-    
+    @IBAction func scheduleTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "toScheduleDetail", sender: self)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             tabBarController?.title = "予定表"

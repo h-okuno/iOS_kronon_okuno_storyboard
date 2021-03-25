@@ -1,35 +1,37 @@
 //
-//  AccountViewController.swift
+//  DetailScheduleViewController.swift
 //  iOS_kronon_okuno_storyboard
 //
-//  Created by 奥野博貴 on 2021/03/09.
+//  Created by 奥野博貴 on 2021/03/12.
 //
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class DetailScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         UITabBar.appearance().tintColor = UIColor(red: 222/255, green: 155/255, blue: 80/255, alpha: 1)
+        
     }
     
-    
-    @IBAction func tapLoguotButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toLogin", sender: self)
+    @IBAction func deleteScheduleTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "toCalendar", sender: self)
     }
+    @IBAction func toEditSchedule(_ sender: Any) {
+        self.performSegue(withIdentifier: "toEditSchedule", sender: self)
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
         
-            tabBarController?.title = "アカウント"
-            tabBarController?.navigationItem.hidesBackButton = true
-            tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
+            navigationItem.title = "予定詳細"
+            navigationItem.backButtonTitle = "予定表"
         
-        }
-
+    }
     /*
     // MARK: - Navigation
 
